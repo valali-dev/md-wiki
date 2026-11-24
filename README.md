@@ -1,10 +1,33 @@
-# mdwiki
+# md-wiki
 
 Single-user wiki for Markdown. One password, no database: all pages are plain `.md` files in a folder.
 Backup and export = copy the `data/` folder.
 
 Looks like a small book shelf: **Shelves → Books → Chapters → Pages**, with a flat, square design
 (sharp corners, light and dark theme).
+
+<table>
+  <tr>
+    <td align="center">Light Mode</td>
+    <td align="center">Dark Mode</td>
+  </tr>
+  <tr>
+    <td><img src="README-img/md-wiki_light-mode.png" width="100%"></td>
+    <td><img src="README-img/md-wiki_dark-mode.png" width="100%"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td align="center">No Preview</td>
+    <td align="center">With Preview</td>
+  </tr>
+  <tr>
+    <td><img src="README-img/md-wiki_nopreview.png" width="100%"></td>
+    <td><img src="README-img/md-wiki_preview.png" width="100%"></td>
+  </tr>
+</table>
+
+It has GitHub Flavoured Markdown (GFM), so it has more Features than normal Markdown.
 
 ## Getting started
 
@@ -24,7 +47,7 @@ Without Docker (for testing, Node 18+ required):
 
 ## Structure
 
-```
+``` none
 server.js            Backend (Node standard library only, no npm packages)
 public/index.html    User interface
 public/app.js        Frontend logic (login, tree, editor, search, own dialogs)
@@ -53,7 +76,7 @@ The mobile layout is read-only on purpose; edit on the desktop layout.
 ## Configuration (environment variables)
 
 | Variable | Default | Meaning |
-|---|---|---|
+| --- | --- | --- |
 | `APP_PASSWORD` | (required) | The one and only password |
 | `PORT` | 3000 | Port inside the container |
 | `DATA_DIR` | `./data` (`/data` in the image) | Folder containing the pages |
