@@ -154,7 +154,7 @@ There is **no extra metadata**. The type of a folder comes only from its depth o
 | 3 and deeper | Chapter | `Technik/Homelab/Server/` |
 | `.md` file anywhere | Page | `Technik/Homelab/Server/Docker.md` |
 
-This is computed in `buildIndex()` in `app.js`. Each type has its own color (`--c-shelf`, `--c-book`, `--c-chapter`, `--c-page`).
+This is computed in `buildIndex()` in `app.js`. Each type has its own color (`--c-shelf`, `--c-book`, `--c-chapter`, `--c-page`). The "New <kind>" button in the actions panel and the new-folder prompt use the depth of the current folder; depth 3 and deeper is always "chapter".
 
 ### Colors and theme
 

@@ -735,8 +735,8 @@ function renderActions() {
     d = ctx ? ctx.depth : 0;
   $("edit").disabled = !(n && n.type === "page") || editing;
   $("rename").disabled = $("delete").disabled = !n;
-  $("newFolder").textContent =
-    "New " + (["shelf", "book", "chapter"][d] || "folder");
+  const kinds = ["shelf", "book", "chapter"];
+  $("newFolder").textContent = "New " + kinds[Math.min(d, kinds.length - 1)];
 }
 for (const id of ["view", "crumbs", "tree"])
   $(id).addEventListener("click", (e) => {
